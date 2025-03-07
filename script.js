@@ -1,10 +1,9 @@
-function getHumanChoice() {
-  let humanChoice = prompt('Pick a weapon');
-  return humanChoice;
-}
 
-console.log(getHumanChoice())
-
+let humanScore = 0;
+let computerScore = 0;
+let result = ''
+let humanSelection = getHumanChoice().toLowerCase();
+let computerSelection = getComputerChoice().toLowerCase();
 
 function getComputerChoice() {
   let randomNumber = Math.random();
@@ -21,4 +20,56 @@ function getComputerChoice() {
   return computerChoice;
 
 };
-console.log(getComputerChoice())
+
+function getHumanChoice() {
+  let humanChoice = prompt('Pick a weapon');
+  return humanChoice;
+}
+
+
+function playRound(humanChoice, computerChoice) {
+
+  if (humanSelection === 'rock'){
+    if (computerSelection === 'rock') {
+      result = 'Tie';
+    } else if (computerSelection === 'paper') {
+      result = 'You lose';
+      // computerScore += 1;
+    } else if (computerSelection === 'scissors') {
+      result = 'You win';
+      // humanScore +=1;
+    };
+  };
+
+  if (humanSelection === 'paper'){
+    if (computerSelection === 'rock') {
+      result = 'You win';
+      // humanScore +=1;
+    } else if (computerSelection === 'paper') {
+      result = 'Tie';
+    } else if (computerSelection === 'scissors') {
+      result = 'You lose';
+      // computerScore += 1;
+    };
+  };
+
+  if (humanSelection === 'scissors'){
+    if (computerSelection === 'rock') {
+      result = 'You lose';
+      // computerScore += 1;
+    } else if (computerSelection === 'paper') {
+      result = 'You win';
+
+    } else if (computerSelection === 'scissors') {
+      result = 'Tie';
+    };
+  };
+
+return result;
+
+};
+
+
+playRound()
+
+// console.log(`CURRENT SCORE: ${humanScore ++}  ${computerScore ++}. This is round ${roundNumber}`)
