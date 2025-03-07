@@ -71,5 +71,6 @@ return result;
 
 
 playRound()
+console.log(`You picked ${humanSelection}. Computer picked ${computerSelection}. ${result}.` );
 
 // console.log(`CURRENT SCORE: ${humanScore ++}  ${computerScore ++}. This is round ${roundNumber}`)
