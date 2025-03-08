@@ -1,9 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Rock Paper Scissors! Gotcha!</title>
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-  <script src="script.js"></script>
+  <p>Rock Paper Scissors! Gotcha!</p>
+  <button onclick="
+
+    const randomNumber = Math.random();
+    gameRound++;
+
+    if (gameRound > 5) {
+      alert('Game Over');
+      humanScore = 0;
+      computerScore = 0;
+      gameRound = 0;
+    } else {
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      };
+
+      let result  = '';
+
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      } else if (computerMove === 'paper') {
+        result = 'You lose.';
+        computerScore++
+      } else if (computerMove === 'scissors') {
+        result = 'You win.';
+        humanScore++
+      };
+
+
+      alert(`Round ${gameRound}. You picked rock. Computer picked ${computerMove}. ${result} Score: Human ${humanScore} : Computer ${computerScore}`);
+    };
+
+
+
+  ">Rock</button>
+  <button onclick="
+
+    const randomNumber = Math.random();
+    gameRound++;
+
+    if (gameRound > 5) {
+      alert('Game Over');
+      humanScore = 0;
+      computerScore = 0;
+      gameRound = 0;
+    } else {
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      console.log(computerMove);
+
+
+      let result  = '';
+
+      if (computerMove === 'rock') {
+        result = 'You win.';
+        humanScore++;
+      } else if (computerMove === 'paper') {
+        result = 'Tie.';
+      } else if (computerMove === 'scissors') {
+        result = 'You lose.';
+        computerScore++;
+      }
+
+      alert(`Round ${gameRound}. You picked paper. Computer picked ${computerMove}. ${result} Score: Human ${humanScore} : Computer ${computerScore}`);
+
+    };
+
+  ">Paper</button>
+  <button onclick="
+    const randomNumber = Math.random();
+    gameRound++;
+
+    if (gameRound > 5) {
+      alert('Game Over');
+      humanScore = 0;
+      computerScore = 0;
+      gameRound = 0;
+    } else {
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      console.log(computerMove);
+
+
+      let result  = '';
+
+      if (computerMove === 'rock') {
+        result = 'You lose.';
+        computerScore++;
+      } else if (computerMove === 'paper') {
+        result = 'You win.';
+        humanScore++;
+      } else if (computerMove === 'scissors') {
+        result = 'Tie.';
+      }
+
+      alert(`Round ${gameRound}. You picked scissors. Computer picked ${computerMove}. ${result} Score: Human ${humanScore} : Computer ${computerScore}`);
+    };
+
+
+
+
+  ">Scissors</button>
+  <script>
+    let gameRound = 0;
+    let humanScore = 0;
+    let computerScore = 0;
+
+  </script>
 </body>
 </html>
