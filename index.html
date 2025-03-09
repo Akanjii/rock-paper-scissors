@@ -3,15 +3,22 @@
 <head>
   <title>Rock Paper Scissors</title>
 </head>
-<body>
-  <p>Rock Paper Scissors! Gotcha!</p>
+<body style="text-align: center;">
+  <p style="font-size: x-large;">Rock Paper Scissors!</p>
   <button onclick="
 
-    const randomNumber = Math.random();
+    randomNumber;
     gameRound++;
 
     if (gameRound > 5) {
-      alert('Game Over. Press Okay to Reset.');
+      if (humanScore > computerScore) {
+        final_result = 'Congratulations! You won the game!'
+      } else if (computerScore > humanScore) {
+        final_result = 'You lost the game.'
+      } else if (humanScore === computerScore) {
+        final_result = 'The game was a Tie!'
+      }
+      alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
       humanScore = 0;
       computerScore = 0;
       gameRound = 0;
@@ -47,11 +54,18 @@
   ">Rock</button>
   <button onclick="
 
-    const randomNumber = Math.random();
+    randomNumber;
     gameRound++;
 
     if (gameRound > 5) {
-      alert('Game Over');
+      if (humanScore > computerScore) {
+        final_result = 'Congratulations! You won the game!'
+      } else if (computerScore > humanScore) {
+        final_result = 'You lost the game.'
+      } else if (humanScore === computerScore) {
+        final_result = 'The game was a Tie!'
+      }
+      alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
       humanScore = 0;
       computerScore = 0;
       gameRound = 0;
@@ -87,11 +101,19 @@
 
   ">Paper</button>
   <button onclick="
-    const randomNumber = Math.random();
+
+    randomNumber;
     gameRound++;
 
     if (gameRound > 5) {
-      alert('Game Over');
+      if (humanScore > computerScore) {
+        final_result = 'Congratulations! You won the game!'
+      } else if (computerScore > humanScore) {
+        final_result = 'You lost the game.'
+      } else if (humanScore === computerScore) {
+        final_result = 'The game was a Tie!'
+      }
+      alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
       humanScore = 0;
       computerScore = 0;
       gameRound = 0;
@@ -133,6 +155,8 @@
     let gameRound = 0;
     let humanScore = 0;
     let computerScore = 0;
+    let final_result = '';
+    let randomNumber = Math.random();
 
   </script>
 </body>
