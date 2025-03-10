@@ -7,11 +7,20 @@
   <div class="game-container" style="height: 100vh; display: flex; align-items: center;">
     <div class="main-container" style="display: flex; flex-direction: column;">
       <div class="game-title">
-        <p style="font-size: xx-large; font-weight: bold; margin: 0;">Rock Paper Scissors!</p>
-        <p style="font-size: medium;">pick a weapon</p>
+        <p style="font-size: 8vw; font-weight: bold; margin: 0;">Rock Paper Scissors!</p>
+        <p style="font-size: 4vw;">pick a weapon </p>
+
       </div>
       <div class="buttons">
-        <button onclick="
+        <button class="rock" style="
+        width: 20vw;
+        height: 5vw;
+        color: #f5f5f5;
+        background-color: #b70101;
+        font-size: x-large;
+        font-weight: bold;
+        border: none;"
+        onclick="
 
           randomNumber;
           gameRound++;
@@ -24,7 +33,7 @@
             } else if (humanScore === computerScore) {
               final_result = 'The game was a Tie!'
             }
-            alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
+            alert(`Game Over.[FINAL SCORE: Human ${humanScore} : Computer ${computerScore}]. ${final_result}. Close this Window to Reset.`);
             humanScore = 0;
             computerScore = 0;
             gameRound = 0;
@@ -58,7 +67,15 @@
 
 
         ">Rock</button>
-        <button onclick="
+        <button class="paper" style="
+        width: 20vw;
+        height: 5vw;
+        color: #f5f5f5;
+        background-color: #b70101;
+        font-size: x-large;
+        font-weight: bold;
+        border: none;"
+        onclick="
 
           randomNumber;
           gameRound++;
@@ -71,7 +88,7 @@
             } else if (humanScore === computerScore) {
               final_result = 'The game was a Tie!'
             }
-            alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
+            alert(`Game Over. [FINAL SCORE: Human ${humanScore} : Computer ${computerScore}].${final_result}. Close this Window to Reset.`);
             humanScore = 0;
             computerScore = 0;
             gameRound = 0;
@@ -106,7 +123,16 @@
           };
 
         ">Paper</button>
-        <button onclick="
+        <button class="scissors" style="
+        width: 20vw;
+        height: 5vw;
+        color: #f5f5f5;
+        background-color: #b70101;
+        font-size: x-large;
+        font-weight: bold;
+        border: none;
+        "
+        onclick="
 
           randomNumber;
           gameRound++;
@@ -119,7 +145,7 @@
             } else if (humanScore === computerScore) {
               final_result = 'The game was a Tie!'
             }
-            alert(`Game Over. Score: Human ${humanScore} : Computer ${computerScore}.${final_result} Press 'Ok' to Reset.`);
+            alert(`Game Over. [FINAL SCORE: Human ${humanScore} : Computer ${computerScore}]. ${final_result}. Close this Window to Reset.`);
             humanScore = 0;
             computerScore = 0;
             gameRound = 0;
@@ -158,6 +184,7 @@
 
         ">Scissors</button>
       </div>
+      <p style="font-style: italic;"> After 5 rounds pick a random weapon to display final score and reset game. </p>
     </div>
   </div>
   <script>
